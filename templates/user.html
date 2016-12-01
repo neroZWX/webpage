@@ -1,0 +1,43 @@
+{% extends "bootstrap/base.html" %}
+{% block title %}Yours{% endblock %}
+{% import "bootstrap/wtf.html"as wtf %}
+{% block navbar %}
+<div class="navbar navbar-inverse" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/" data-transition="pop">Home</a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="info">info</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+{% endblock %}
+ 
+{% block content %}
+<form method="POST">
+<div class="container">
+    <div class="page-header">
+        <h1>Saturday, {{ name }}!</h1>
+    </div>
+    <div class="img">
+	<img src="../static/first.jpg" class="img-rounded" width="204" height="236">
+	<img src="../static/second.jpg" class="img-rounded" width="204" height="236">
+	<img src="../static/third.jpg" class="img-rounded" width="204" height="236">
+	<img src="../static/fourth.jpg" class="img-rounded" width="204" height="236">
+    </div>
+</div>
+</form>
+{% endblock %}
+
+
+
+	

@@ -1,0 +1,42 @@
+{% extends "bootstrap/base.html" %}
+{% block title %}Register{% endblock %}
+{% import "bootstrap/wtf.html"as wtf %}
+{% block navbar %}
+<div class="navbar navbar-inverse" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/" data-transition="pop">Home</a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="info">info</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+{% endblock %}
+ 
+{% block content %}
+	<h1>&nbsp&nbspRegister!</h1>
+
+
+	<h2>&nbsp&nbspUsername</h2>
+
+
+	<input type="text" name="username" value="" class="input-block-level" placeholder="username">
+	<h2>&nbsp&nbspPassword</h2>
+
+
+	<input type="password" name="password" value="" class="input-block-level" placeholder="password"> <br>
+	<button class="btn-primary" type="submit" value="Login" onclick="window.open('http://127.0.0.1:5000')">submit</button>
+{% endblock %}
+
+
+
+	

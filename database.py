@@ -4,7 +4,7 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import scoped_session, sessionmaker
 from sqlalchemy.ext.declarative import declarative_base
 
-engine = create_engine('sqlite:///./test.db', convert_unicode=True) # ´´½¨Êı¾İ¿âÒıÇæ( µ±Ç°Ä¿Â¼ÏÂ±£´æÊı¾İ¿âÎÄ¼ş) 
+engine = create_engine('sqlite:///./test.db', convert_unicode=True) # åˆ›å»ºæ•°æ®åº“å¼•æ“( å½“å‰ç›®å½•ä¸‹ä¿å­˜æ•°æ®åº“æ–‡ä»¶) 
 db_session = scoped_session(sessionmaker(autocommit=False,
                                          autoflush=False,
                                          bind=engine))
@@ -12,8 +12,8 @@ Base = declarative_base()
 Base.query = db_session.query_property()
 
 def init_db():
-    # ÔÚÕâÀïµ¼ÈëËùÓĞµÄ¿ÉÄÜÓë¶¨ÒåÄ£ĞÍÓĞ¹ØµÄÄ£¿é£¬ÕâÑùËûÃÇ²Å»áºÏÊÊµØ
-    # ÔÚ metadata ÖĞ×¢²á¡£·ñÔò£¬Äú½«²»µÃ²»ÔÚµÚÒ»´ÎÖ´ĞĞ init_db() Ê±
-    # ÏÈµ¼ÈëËûÃÇ¡£
+     
+    # metadata 
+    
     import models
     Base.metadata.create_all(bind=engine)

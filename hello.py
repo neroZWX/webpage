@@ -9,7 +9,7 @@ import pymysql
 
 class DBConnect:
     def db_connect(DATABASE_URL):
-	conn = pymysql.connect(host='localhost',user='root',password='6838699',
+	conn = pymysql.connect(host='localhost',user='root',password='',
 				db='test',charset='charset')
 	cursor = conn.cursor()
 	
